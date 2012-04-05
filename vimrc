@@ -1,5 +1,5 @@
-" Gavin GVIM VIMRC 
-" 
+" Gavin GVIM VIMRC
+"
 " Date: 2012-4-3
 " Version: 0.1
 " Disclaimer: credit to https://github.com/spf13/spf13-vim
@@ -17,7 +17,7 @@
 
 		" Windows Compatible {
 			" On Windows, also use '.vim' instead of 'vimfiles'; this makes synchronization
-			" across (heterogeneous) systems easier. 
+			" across (heterogeneous) systems easier.
 			if has('win32') || has('win64')
 			  set runtimepath=$HOME/.vim,$VIM/vimfiles,$VIMRUNTIME,$VIM/vimfiles/after,$HOME/.vim/after
 			endif
@@ -36,13 +36,13 @@
 " Bundles {
 		"vim settings
 		"vundle plugin manager
-        Bundle 'gmarik/vundle'
+		Bundle 'gmarik/vundle'
 		"ack-grep needed
-        Bundle 'mileszs/ack.vim'
+		Bundle 'mileszs/ack.vim'
 		"file explorer manager
 		Bundle 'scrooloose/nerdtree'
 		"single pane for all tabs
-		bundle 'jistr/vim-nerdtree-tabs'
+		Bundle 'jistr/vim-nerdtree-tabs'
 		"session manager
 		Bundle 'vim-scripts/sessionman.vim'
 		"replacement of command-T
@@ -51,7 +51,7 @@
 		Bundle 'Lokaltog/vim-powerline'
 		"easy jumping \w
 		Bundle 'Lokaltog/vim-easymotion'
-	
+
 		"auto pair (){}[]''
 		Bundle 'AutoClose'
 		"allow gvim colorscheme for terminal
@@ -80,7 +80,7 @@
 		Bundle 'majutsushi/tagbar'
 		"ultimate auto-complete
 		Bundle 'Shougo/neocomplcache'
-"}
+		"}
 
 
 "--------------------------------------------------
@@ -92,11 +92,11 @@
 			filetype plugin indent on				"automatically detect file types.
 			syntax on								"syntax highlighting
 			set mouse=a								"automatically enable mouse usage
-			set winaltkeys=no						"disable alt of menu mnemonics 
+			set winaltkeys=no						"disable alt of menu mnemonics
 			set guicursor+=a:blinkon0				"disable all blinking:
-			set nobackup							"no backup 
+			set nobackup							"no backup
 			set noswapfile							"no swapfile
-			set autoread							"auto load when changed from outside  
+			set autoread							"auto load when changed from outside
 
 			set virtualedit=onemore					"allow for cursor beyond last character
 			set history=300							"store a ton of history (default is 20)
@@ -113,7 +113,7 @@
 	" Vim UI {
 			set tabpagemax=15						"only show 15 tabs
 			set splitbelow							"split windows below current window
-			set showmode							"display the current mode 
+			set showmode							"display the current mode
 			set cursorline							"highlight current line
 			set backspace=indent,eol,start			"backspace for dummies
 			set number								"line numbers on
@@ -188,26 +188,26 @@
 	" }
 
 	" Session {
-			fu! SaveSess()                                                                                                                                                                                                                                                                                                              
-				if bufnr('$') >= 8 
-					execute 'mksession! ' . getcwd() . '/.session.vim'                                                                                                                                                                                                                                                                      
+			fu! SaveSess()
+				if bufnr('$') >= 8
+					execute 'mksession! ' . getcwd() . '/.session.vim'
 				endif
-			endfunction                                                                                                                                                                                                                                                                                                                 
+			endfunction
 
-			fu! RestoreSess()                                                                                                                                                                                                                                                                                                           
-			if filereadable(getcwd() . '/.session.vim')                                                                                                                                                                                                                                                                                 
-				execute 'so ' . getcwd() . '/.session.vim'                                                                                                                                                                                                                                                                              
-				if bufexists(1)                                                                                                                                                                                                                                                                                                         
-					for l in range(1, bufnr('$'))                                                                                                                                                                                                                                                                                       
-						if bufwinnr(l) == -1                                                                                                                                                                                                                                                                                            
-							exec 'sbuffer ' . l                                                                                                                                                                                                                                                                                         
-						endif                                                                                                                                                                                                                                                                                                           
-					endfor                                                                                                                                                                                                                                                                                                              
-				endif                                                                                                                                                                                                                                                                                                                   
-			endif                                                                                                                                                                                                                                                                                                                       
-			endfunction                                                                                                                                                                                                                                                                                                                 
+			fu! RestoreSess()
+			if filereadable(getcwd() . '/.session.vim')
+				execute 'so ' . getcwd() . '/.session.vim'
+				if bufexists(1)
+					for l in range(1, bufnr('$'))
+						if bufwinnr(l) == -1
+							exec 'sbuffer ' . l
+						endif
+					endfor
+				endif
+			endif
+			endfunction
 
-			"autocmd VimLeave * call SaveSess()                                                                                                                                                                                                                                                                                          
+			"autocmd VimLeave * call SaveSess()
 			"autocmd VimEnter * call RestoreSess()
 	" }
 " }
@@ -225,7 +225,7 @@
 		let g:mapleader = ','
 
 		"easier return to cmd mode
-		imap jj <esc> 
+		imap jj <esc>
 
 	"Movement Mapping {
 
@@ -240,7 +240,7 @@
 		nnoremap k gk
 
 		"easy half screen move
-		noremap <A-j> <C-d> 
+		noremap <A-j> <C-d>
 		noremap <A-k> <C-u>
 
 		" goto buffer and tabs
@@ -265,14 +265,14 @@
 
 			copen
 		endfunction
-		command! Ctoggle call s:qf_toggle() 
+		command! Ctoggle call s:qf_toggle()
 	"}
 
 	"Tab Mapping {
 		nmap <leader>_ :Scratch<CR>			"create a scratch buffer
 		nmap <leader>= :tabnew<CR>			"create an empty tab
 		nnoremap <leader>w :tabclose<CR>	"close a tab
-	}
+	"}
 
 	"Editing Mapping {
 
@@ -358,13 +358,13 @@
 		"change to current file dir
 		cnoremap cwd lcd %:p:h					"change to current file dir
 		cnoremap cd. lcd %:p:h					"change to current file dir
-		
+
 		"easier cmd history
 		cnoremap <C-P> <Up>						"previous command in command history
 		cnoremap <C-N> <Down>					"next command in command history
 
-		"easier paste 
-		cmap <C-V>		<C-R>+					"support ctrl-v paste in command mode	
+		"easier paste
+		cmap <C-V>		<C-R>+					"support ctrl-v paste in command mode
 
 		"help on current word in new tab
 		cnoreabbrev h tab h
@@ -397,7 +397,7 @@
 
 		" use ack-grep to search
 		nmap <leader>sw :Ack <C-R>=expand("<cword>")<CR><CR>
-		nmap <leader>ss :Ack 
+		nmap <leader>ss :Ack
     " }
 
     " OmniComplete {
@@ -532,10 +532,10 @@
         inoremap <expr><C-l>     neocomplcache#complete_common_string()
 
 
-        " <CR>: close popup 
+        " <CR>: close popup
         " <s-CR>: close popup and save indent.
         inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "\<CR>"
-        inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup() "\<CR>" : "\<CR>" 
+        inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup() "\<CR>" : "\<CR>"
         " <TAB>: completion.
         inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
