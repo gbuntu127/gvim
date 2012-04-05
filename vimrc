@@ -37,12 +37,16 @@
 		"vim settings
 		"vundle plugin manager
 		Bundle 'gmarik/vundle'
+		"addon manager, snip-mate needs it
+        Bundle 'MarcWeber/vim-addon-mw-utils'
+		"also snip-mate needs it
+        Bundle 'tomtom/tlib_vim'
 		"ack-grep needed
 		Bundle 'mileszs/ack.vim'
 		"file explorer manager
 		Bundle 'scrooloose/nerdtree'
 		"single pane for all tabs
-		Bundle 'jistr/vim-nerdtree-tabs'
+		"Bundle 'jistr/vim-nerdtree-tabs'
 		"session manager
 		Bundle 'vim-scripts/sessionman.vim'
 		"replacement of command-T
@@ -80,7 +84,7 @@
 		Bundle 'majutsushi/tagbar'
 		"ultimate auto-complete
 		Bundle 'Shougo/neocomplcache'
-		"}
+"}
 
 
 "--------------------------------------------------
@@ -99,15 +103,15 @@
 			set autoread							"auto load when changed from outside
 
 			set virtualedit=onemore					"allow for cursor beyond last character
-			set history=300							"store a ton of history (default is 20)
-			set spell								"spell checking on
+			set history=100							"store a ton of history (default is 20)
+			set nospell								"spell checking off
 			set hidden								"allow buffer switching without saving
 			set autowrite							"automatically write a file when leaving a modified buffer
 			set title								"set terminal title to filename
 
-			set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
-			au BufWinLeave *.* silent! mkview		"make vim save view (state) (folds, cursor, etc)
-			au BufWinEnter *.* silent! loadview		"make vim load view (state) (folds, cursor, etc)
+			"set viewoptions=folds,options,cursor,unix,slash " better unix / windows compatibility
+			"au BufWinLeave *.* silent! mkview		"make vim save view (state) (folds, cursor, etc)
+			"au BufWinEnter *.* silent! loadview		"make vim load view (state) (folds, cursor, etc)
 	" }
 
 	" Vim UI {
@@ -144,17 +148,26 @@
 			if has('statusline')
 				set laststatus=2					"always show status line
 
-				" Broken down into easily includeable segments
-				set statusline=%<%f\				"filename
-				set statusline+=%w%h%m%r			"options
-				"set statusline+=%{fugitive#statusline()} "Git Hotness
-				set statusline+=\ [%{&ff}/%Y]            "filetype
-				set statusline+=\ [%{getcwd()}]          "current dir
-				set statusline+=%=%-14.(%l,%c%V%)\ %p%%  "Right aligned file nav info
+				""" Broken down into easily includeable segments
+				"set statusline=%<%F\				"filename
+				"set statusline+=%w%h%m%r			"options
+				""set statusline+=%{fugitive#statusline()} "git hotness
+				"set statusline+=\ [%{&ff}/%y]            "filetype
+				"set statusline+=\ [%{CurDir()}]          "current dir
+				"set statusline+=\ [%{tagbar#currenttag('[Tag:%s]','Tag:N/A')}]		"current tag
+				"set statusline+=%=%-14.(%l,%c%v)\ %p%%  "right aligned file nav info
+
+				"" Broken down into easily includeable segments
+				"set statusline=%<%f\				"filename
+				"set statusline+=%w%h%m%r			"options
+				""set statusline+=%{fugitive#statusline()} "Git Hotness
+				"set statusline+=\ [%{&ff}/%Y]            "filetype
+				"set statusline+=\ [%{getcwd()}]          "current dir
+				"set statusline+=%=%-14.(%l,%c%V%)\ %p%%  "Right aligned file nav info
 			endif
 
-			"" format the statusline
-			"set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ [Tag:%{Tlist_Get_Tagname_By_Line()}]\ \ \ Line:\ %l/%L:[%p%%]\ \ \ Col:%c\ \ \ Buf:#%n
+			" format the statusline
+			"set statusline=%<\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{CurDir()}%h\ \ \ [%{tagbar#currenttag('[%s] ', '')}]\ \ \ Line:\ %l/%L:[%p%%]\ \ \ Col:%c\ \ \ Buf:#%n
 			"function! CurDir()
 				"let curdir = substitute(getcwd(), '/home/gavin/', "~/", "g")
 				"return curdir
@@ -182,9 +195,9 @@
 			set softtabstop=4						"let backspace delete indent
 			set smarttab							"smart tab insert/delete
 
-			" Remove trailing whitespaces and ^M chars
-			autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml
-			autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
+			"remove trailing whitespaces and ^M chars
+			"autocmd FileType c,cpp,java,php,javascript,python,twig,xml,yml
+			"autocmd BufWritePre <buffer> :call setline(1,map(getline(1,"$"),'substitute(v:val,"\\s\\+$","","")'))
 	" }
 
 	" Session {
@@ -244,10 +257,10 @@
 		noremap <A-k> <C-u>
 
 		" goto buffer and tabs
-		map <C-right> <ESC>:bn<CR>
-		map <C-left> <ESC>:bp<CR>
-		map <A-right> <ESC>gt<CR>
-		map <A-left> <ESC>gT<CR>
+		map <A-right> <ESC>:bn<CR>
+		map <A-left> <ESC>:bp<CR>
+		map <C-right> <ESC>gt<CR>
+		map <C-left> <ESC>gT<CR>
 	"}
 
 	"Windows Mapping {
@@ -271,7 +284,7 @@
 	"Tab Mapping {
 		nmap <leader>_ :Scratch<CR>			"create a scratch buffer
 		nmap <leader>= :tabnew<CR>			"create an empty tab
-		nnoremap <leader>w :tabclose<CR>	"close a tab
+		nnoremap <leader>gt :tabclose<CR>	"close a tab
 	"}
 
 	"Editing Mapping {
@@ -307,7 +320,7 @@
 
 		"copy cut paste, traditional support
 		vnoremap <C-C>	"+y
-		map <C-S-P>		"+gP
+		"map <C-S-P>		"+gP
 		vnoremap <C-X>	"+x
 
 		"CTRL-A is Select all
@@ -325,10 +338,10 @@
 		onoremap <C-Tab> <C-C>gt
 
 		"CTRL-SHIFT-Tab is Previous tab
-		noremap <C-Tab> gT
-		inoremap <C-Tab> <C-O>gT
-		cnoremap <C-Tab> <C-C>gT
-		onoremap <C-Tab> <C-C>gT
+		noremap <C-S-Tab> gT
+		inoremap <C-S-Tab> <C-O>gT
+		cnoremap <C-S-Tab> <C-C>gT
+		onoremap <C-S-Tab> <C-C>gT
 
 		"CTRL-Z is Undo; not in cmdline though, this hide gvim suspend command
 		noremap <C-Z> u
@@ -337,15 +350,19 @@
 		"use space to open fold
 		nnoremap <silent> <Space> @=(foldlevel('.')?'zA':"\<Space>")<CR>
 		vnoremap <Space> zf
+		
+		"remove trailing  of some c files
+		nnoremap <leader>rt :%s///g<CR>
 
-		cmap w!! w !sudo tee % >/dev/null	"when you forget to sudo.
+		"when you forget to sudo.
+		cmap w!! w !sudo tee % >/dev/null
 	"}
 
 	"Function Mapping {
 
-		set pastetoggle=<F12>				"paste mode toggle
+		set pastetoggle=<F12><CR>				"paste mode toggle
 
-		"noremap <leader>gp :set paste! paste?<CR>	"toggle paste mode
+		noremap <leader>gp :set paste! paste?<CR>	"toggle paste mode
 		noremap <leader>gh :nohlsearch<CR>			"clearing highlighted search
 		noremap <leader>gn :set number! number?<CR>	"line number
 		noremap <leader>gw :set wrap! wrap?<CR>		"warp line
@@ -363,20 +380,19 @@
 		cnoremap <C-P> <Up>						"previous command in command history
 		cnoremap <C-N> <Down>					"next command in command history
 
-		"easier paste
-		cmap <C-V>		<C-R>+					"support ctrl-v paste in command mode
+		"easier paste, this disabled literal insertion
+		"cmap <C-V>		<C-R>+					"support ctrl-v paste in command mode
 
 		"help on current word in new tab
 		cnoreabbrev h tab h
 		nmap <leader><F1> :h <C-R>=expand("<cword>")<CR><CR>
-
+		nmap <leader><leader><F1> :helpgrep <C-R>=expand("<cword>")<CR><CR>
 	"}
 
 	"VIMRC Mapping {
 
 		nmap <leader>ev :tabe $MYVIMRC<CR>	" edit the vimrc file
 		nmap <leader>sv :so $MYVIMRC<CR>	" reload the vimrc file
-
 	"}
 " }
 
@@ -386,9 +402,32 @@
 " Plugins {
 
     " Misc {
-        let g:NERDShutUp=1
-        let b:match_ignorecase = 1
+        "let g:NERDShutUp=0
+        "let b:match_ignorecase = 1
     " }
+
+    " Ctrlp{
+		let g:ctrlp_map = '<leader>b'
+		"matching on top
+		let g:ctrlp_match_window_bottom = 1
+		"most recent used"
+		nnoremap <leader>bf :CtrlPMRU<CR>
+		"buffer list"
+		nnoremap <leader>bb :CtrlPBuffer<CR>
+		"max windows height"
+		let g:ctrlp_max_height = 50
+    " }
+
+    " NarrowRegion{
+		"default to vertical region
+		let g:nrrw_rgn_vert = 1
+		"extract narrow window
+		xmap <leader>nr <Plug>NrrwrgnDo<C-W>=
+    " }
+
+    " Powerline{
+		let g:Powerline_symbols = 'unicode'
+	" }
 
     " Ack-grep {
 		" set ack-grep as search engine, define searching type
@@ -396,8 +435,8 @@
 		set grepprg=ack-grep\ --cpp\ --cc\ --perl\ --python\ --make
 
 		" use ack-grep to search
-		nmap <leader>sw :Ack <C-R>=expand("<cword>")<CR><CR>
-		nmap <leader>ss :Ack
+		nmap <leader><leader>sw :Ack <C-R>=expand("<cword>")<CR><CR>
+		nmap <leader><leader>ss :Ack
     " }
 
     " OmniComplete {
@@ -408,9 +447,9 @@
                 \endif
         endif
 
-        hi Pmenu  guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
-        hi PmenuSbar  guifg=#8A95A7 guibg=#F8F8F8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
-        hi PmenuThumb  guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
+        "hi Pmenu  guifg=#000000 guibg=#F8F8F8 ctermfg=black ctermbg=Lightgray
+        "hi PmenuSbar  guifg=#8A95A7 guibg=#F8F8F8 gui=NONE ctermfg=darkcyan ctermbg=lightgray cterm=NONE
+        "hi PmenuThumb  guifg=#F8F8F8 guibg=#8A95A7 gui=NONE ctermfg=lightgray ctermbg=darkcyan cterm=NONE
 
         " some convenient mappings
         inoremap <expr> <Esc>      pumvisible() ? "\<C-e>" : "\<Esc>"
@@ -431,9 +470,9 @@
     " }
 
     " AutoCloseTag {
-        " Make it so AutoCloseTag works for xml and xhtml files as well
-        au FileType xhtml,xml ru ftplugin/html/autoclosetag.vim
-        nmap <Leader>ac <Plug>ToggleAutoCloseMappings
+        "" Make it so AutoCloseTag works for xml and xhtml files as well
+        "au FileType xhtml,xml ru ftplugin/html/autoclosetag.vim
+        "nmap <Leader>ac <Plug>ToggleAutoCloseMappings
     " }
 
     " NerdTree {
@@ -446,7 +485,7 @@
         let NERDTreeChDirMode=0
         let NERDTreeQuitOnOpen=1
         "let NERDTreeShowHidden=1
-        "let NERDTreeKeepTreeInNewTab=1
+		let NERDTreeKeepTreeInNewTab=1
     " }
 
     " Tabularize {
@@ -485,7 +524,7 @@
      " }
 
      " Buffer explorer {
-        nmap <leader>b :BufExplorer<CR>
+        "nmap <leader>b :BufExplorer<CR>
      " }
 
      " ctrlp {
@@ -498,7 +537,8 @@
      "}
 
      " TagBar {
-        nnoremap <silent> <leader>F4 :TagbarToggle<CR>
+        nnoremap <silent><F4> :TagbarToggle<CR>
+        let g:tagbar_left = 1
      "}
 
      "" Fugitive {
