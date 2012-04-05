@@ -20,9 +20,9 @@ for i in $HOME/.vim $HOME/.vimrc $HOME/.gvimrc; do [ -e $i ] && mv $i $gavimBakD
 
 # clone from github.com
 echo "Gavin [step 2]: cloning gavinVim\n"
-git clone http://github.com/ $gvimDir
+git clone git@github.com:gbuntu127/gvim.git $gvimDir
 mkdir -p $gvimDir/bundle
-#ln -s $gvimDir/vimrc $HOME/.vimrc
+ln -s $gvimDir/vimrc $HOME/.vimrc
 #ln -s $gvimDir/vim $HOME/.vim
 
 echo "Gavin [step 3]: installing Vundle"
