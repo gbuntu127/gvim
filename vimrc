@@ -35,30 +35,51 @@
 "--------------------------------------------------
 " Bundles {
 		"vim settings
-        Bundle 'gmarik/vundle'				"vundle plugin manager
-        Bundle 'mileszs/ack.vim'			"ack-grep needed
-		Bundle 'scrooloose/nerdtree'		"file explorer manager
-		bundle 'jistr/vim-nerdtree-tabs'	"single pane for all tabs
-		Bundle 'vim-scripts/sessionman.vim' "session manager
-		Bundle 'kien/ctrlp.vim'				"replacement of command-T
-		Bundle 'Lokaltog/vim-powerline'		"format statusline
-		Bundle 'Lokaltog/vim-easymotion'	"easy jumping \w
+		"vundle plugin manager
+        Bundle 'gmarik/vundle'
+		"ack-grep needed
+        Bundle 'mileszs/ack.vim'
+		"file explorer manager
+		Bundle 'scrooloose/nerdtree'
+		"single pane for all tabs
+		bundle 'jistr/vim-nerdtree-tabs'
+		"session manager
+		Bundle 'vim-scripts/sessionman.vim'
+		"replacement of command-T
+		Bundle 'kien/ctrlp.vim'
+		"format statusline
+		Bundle 'Lokaltog/vim-powerline'
+		"easy jumping \w
+		Bundle 'Lokaltog/vim-easymotion'
 	
-		Bundle 'AutoClose'					"auto pair (){}[]''
-		Bundle 'godlygeek/csapprox'			"allow gvim colorscheme for terminal
-		Bundle 'flazz/vim-colorschemes'		"colorscheme collections
+		"auto pair (){}[]''
+		Bundle 'AutoClose'
+		"allow gvim colorscheme for terminal
+		Bundle 'godlygeek/csapprox'
+		"colorscheme collections
+		Bundle 'flazz/vim-colorschemes'
 
 		"programming helpers
-		Bundle 'chrisbra/NrrwRgn'			"edit selected region only
-		Bundle 'scrooloose/syntastic'		"syntax checking plugin
-		Bundle 'garbas/vim-snipmate'		"snippets support
-		Bundle 'spf13/snipmate-snippets'	"collection of snippets
-		Bundle 'nathanaelkane/vim-indent-guides'	"indent indicator
-		"Bundle 'tpope/vim-fugitive'				"git wrapper
-		Bundle 'scrooloose/nerdcommenter'	"easy comment
-		Bundle 'godlygeek/tabular'			"easy format text
-		Bundle 'majutsushi/tagbar'			"replacement of taglist, need ctags
-		Bundle 'Shougo/neocomplcache'		"ultimate auto-complete
+		"edit selected region only
+		Bundle 'chrisbra/NrrwRgn'
+		"syntax checking plugin
+		Bundle 'scrooloose/syntastic'
+		"snippets support
+		Bundle 'garbas/vim-snipmate'
+		"collection of snippets
+		Bundle 'spf13/snipmate-snippets'
+		"indent indicator
+		Bundle 'nathanaelkane/vim-indent-guides'
+		"git wrapper
+		"Bundle 'tpope/vim-fugitive'
+		"easy comment
+		Bundle 'scrooloose/nerdcommenter'
+		"easy format text
+		Bundle 'godlygeek/tabular'
+		"replacement of taglist, need ctags
+		Bundle 'majutsushi/tagbar'
+		"ultimate auto-complete
+		Bundle 'Shougo/neocomplcache'
 "}
 
 
@@ -355,9 +376,6 @@
 
 		nmap <leader>ev :tabe $MYVIMRC<CR>	" edit the vimrc file
 		nmap <leader>sv :so $MYVIMRC<CR>	" reload the vimrc file
-
-
-
 
 	"}
 " }
