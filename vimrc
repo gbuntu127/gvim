@@ -61,7 +61,7 @@
 		"allow gvim colorscheme for terminal
 		Bundle 'godlygeek/csapprox'
 		"colorscheme collections
-		Bundle 'flazz/vim-colorschemes'
+		"Bundle 'flazz/vim-colorschemes'
 
 		"programming helpers
 		"edit selected region only
@@ -433,6 +433,11 @@
 
     " Powerline{
 		let g:Powerline_symbols = 'unicode'
+	" }
+
+    " ScrollColors{
+		nnoremap <silent><F8> :NEXTCOLOR<cr>
+		nnoremap <silent><F7> :PREVCOLOR<cr>
 	" }
 
     " Ack-grep {

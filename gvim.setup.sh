@@ -16,10 +16,10 @@ die() {
 # Backup existing .vim stuff
 echo "Gavin [step 1]: backing up current vim config\n"
 mkdir -p $gvimBakDir 
-
-mv $HOME/.vim $gavimBakDir/vim.$today
-mv $HOME/.vimrc $gavimBakDir/vimrc.$today
-mv $HOME/.gvimrc $gavimBakDir/gvimrc.$today
+zip -ur $gavimBakDir/vim.$today $HOME/.vim $HOME/.vimrc $HOME/.gvimrc 
+#mv $HOME/.vim $gavimBakDir/vim.$today
+#mv $HOME/.vimrc $gavimBakDir/vimrc.$today
+#mv $HOME/.gvimrc $gavimBakDir/gvimrc.$today
 
 # clone from github.com
 echo "Gavin [step 2]: cloning gavinVim\n"
