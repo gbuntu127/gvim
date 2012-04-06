@@ -1,8 +1,10 @@
 #!/bin/bash
 
-gvimDir="$HOME/.vim"
+gvimDir=$HOME/.vim
 today=`date +%Y%m%d`
-gvimBakDir="$HOME/Dropbox/vim/Backup/$today"
+gvimBakDir=$HOME/Dropbox/vim/Backup/$today
+
+
 warn() {
     echo "$1" >&2
 }
@@ -16,7 +18,9 @@ die() {
 # Backup existing .vim stuff
 echo "Gavin [step 1]: backing up current vim config\n"
 mkdir -p $gvimBakDir 
-zip -ur $gavimBakDir/vim.$today $HOME/.vim $HOME/.vimrc $HOME/.gvimrc 
+zip -ur $HOME/vim.$today.zip $HOME/.vim $HOME/.vimrc $HOME/.gvimrc 
+mv $HOME/vim.$today.zip $gvimBakDir
+
 #mv $HOME/.vim $gavimBakDir/vim.$today
 #mv $HOME/.vimrc $gavimBakDir/vimrc.$today
 #mv $HOME/.gvimrc $gavimBakDir/gvimrc.$today
