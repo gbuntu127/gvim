@@ -84,6 +84,8 @@
 		Bundle 'majutsushi/tagbar'
 		"ultimate auto-complete
 		Bundle 'Shougo/neocomplcache'
+		"empty scratch 
+		Bundle 'duff/vim-scratch'
 "}
 
 
@@ -321,6 +323,7 @@
 		"copy cut paste, traditional support
 		vnoremap <C-C>	"+y
 		"map <C-S-P>		"+gP
+		map <C-P>		"+gP
 		vnoremap <C-X>	"+x
 
 		"CTRL-A is Select all
@@ -368,6 +371,8 @@
 		noremap <leader>gw :set wrap! wrap?<CR>		"warp line
 		noremap <leader>gs :set spell!<CR>			"enable spell checking
 
+		noremap <Leader>q :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+		noremap <Leader>vq :vs %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 	"}
 
 	"Command Mapping {
@@ -382,6 +387,7 @@
 
 		"easier paste, this disabled literal insertion
 		"cmap <C-V>		<C-R>+					"support ctrl-v paste in command mode
+		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode
 
 		"help on current word in new tab
 		cnoreabbrev h tab h
