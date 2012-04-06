@@ -61,9 +61,7 @@
 		"allow gvim colorscheme for terminal
 		Bundle 'godlygeek/csapprox'
 		"colorscheme collections
-		"Bundle 'flazz/vim-colorschemes'
-		"Gavin color selection and ScrollColor plugin
-		Bundle 'gbuntu127/gcolor'
+		Bundle 'flazz/vim-colorschemes'
 
 		"programming helpers
 		"edit selected region only
@@ -88,6 +86,9 @@
 		Bundle 'Shougo/neocomplcache'
 		"empty scratch 
 		Bundle 'duff/vim-scratch'
+		"easy maintain of ctags, requires Exuberant Ctags
+		Bundle 'xolox/vim-easytags'
+'
 "}
 
 
@@ -300,10 +301,14 @@
 
 		"easy to edit of files under current file path
 		cnoremap %% <C-R>=expand('%:h').'/'<cr>
-		nmap <leader>ew :e %%				"edit file in current window
-		nmap <leader>es :sp %%				"edit file in split window
-		nmap <leader>ev :vsp %%				"edit file in vertically split window
-		nmap <leader>et :tabe %%			"edit file in new tab
+		"easy to edit of files under current file path
+		cnoremap %% <C-R>=expand('%:h').'/'<cr>
+		"edit file in current window
+		nmap <leader>ew :e %%
+		"edit file in vertically split window
+		nmap <leader>es :vsp %%
+		"edit file in new tab
+		nmap <leader>et :tabe %%
 
 		"switch two lines
 		nmap <leader>gj mz:m+<cr>`z
@@ -325,7 +330,7 @@
 		"copy cut paste, traditional support
 		vnoremap <C-C>	"+y
 		"map <C-S-P>		"+gP
-		map <C-P>		"+gP
+		noremap <C-P>		"+gP
 		vnoremap <C-X>	"+x
 
 		"CTRL-A is Select all
@@ -374,7 +379,8 @@
 		noremap <leader>gs :set spell!<CR>			"enable spell checking
 
 		noremap <Leader>q :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
-		noremap <Leader>vq :vs %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+		noremap <Leader>qv :vs %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
+		noremap <Leader>qt :tabe %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>
 	"}
 
 	"Command Mapping {
@@ -395,6 +401,7 @@
 		cnoreabbrev h tab h
 		nmap <leader><F1> :h <C-R>=expand("<cword>")<CR><CR>
 		nmap <leader><leader><F1> :helpgrep <C-R>=expand("<cword>")<CR><CR>
+		au! FileType help map <buffer> <F1> :q<cr>
 	"}
 
 	"VIMRC Mapping {
@@ -437,11 +444,6 @@
 		let g:Powerline_symbols = 'unicode'
 	" }
 
-    " ScrollColors{
-		nnoremap <silent><F8> :NEXTCOLOR<cr>
-		nnoremap <silent><F7> :PREVCOLOR<cr>
-	" }
-
     " Ack-grep {
 		" set ack-grep as search engine, define searching type
 		let g:ackprg="ack-grep -H --nocolor --nogroup --column"
@@ -478,8 +480,14 @@
     " }
 
     " EasyTag {
-        set tags=./tags;/,~/.vimtags
-		let g:easytags_cmd = 'ctags'
+        set tags=./tags;/,~/.vimtags			"tag storage places, local folder first, otherwise to global one
+		let g:easytags_cmd = 'ctags'			"ctag program location, eqv. to /usr/local/bin/ctags
+		let g:easytags_dynamic_files = 2		"=0 means global first, =1 means local first, =2 means local only
+
+		let g:easytags_include_members = 1		"ctags by default does not generate tags for class and structs
+		highlight link cMember Special			"adapt colorscheme to highlight class/struct tags
+		"highlight cMember gui=italic			"can aslo define it by yourself
+		"let g:easytags_resolve_links = 1		"if you use symbolic link a lot
     " }
 
     " AutoCloseTag {
