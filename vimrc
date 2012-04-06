@@ -62,6 +62,8 @@
 		Bundle 'godlygeek/csapprox'
 		"colorscheme collections
 		"Bundle 'flazz/vim-colorschemes'
+		"Gavin color selection and ScrollColor plugin
+		Bundle 'gbuntu127/gcolor'
 
 		"programming helpers
 		"edit selected region only
