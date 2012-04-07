@@ -362,8 +362,10 @@
 		nnoremap <silent> <Space> @=(foldlevel('.')?'zA':"\<Space>")<CR>
 		vnoremap <Space> zf
 		
-		"remove trailing  of some c files
-		nnoremap <leader>rt :%s///g<CR>
+		"remove trailing 
+ of some c files
+		nnoremap <leader>rt :%s/
+//g<CR>
 
 		"when you forget to sudo.
 		cmap w!! w !sudo tee % >/dev/null
@@ -442,13 +444,15 @@
     " }
 
     " Powerline{
-		let g:Powerline_symbols = 'unicode'
-		"insert curdir befere file name
-		call Pl#Theme#InsertSegment('pwd', 'before', 'fileinfo')
-		""insert tag after fileinfo [todo]
-		"let g:current_tag_name = "%{tagbar#currenttag('[%s] ', '')}"
-		"call Pl#Segment#Create('tagname','g:current_tag_name')
-		"call Pl#Theme#InsertSegment('tagname', 'after', 'fileinfo')
+		if !has('gui_running')
+			let g:Powerline_symbols = 'unicode'
+			"insert curdir befere file name
+			call Pl#Theme#InsertSegment('pwd', 'before', 'fileinfo')
+			""insert tag after fileinfo [todo]
+			"let g:current_tag_name = "%{tagbar#currenttag('[%s] ', '')}"
+			"call Pl#Segment#Create('tagname','g:current_tag_name')
+			"call Pl#Theme#InsertSegment('tagname', 'after', 'fileinfo')
+		endif 
 	" }
 
     " ScrollColors{
