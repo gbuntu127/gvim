@@ -1,0 +1,219 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	2	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+%%	/home/gavin/gavim/gvim/vimrc	/^		cnoremap %% <C-R>=expand('%:h').'\/'<cr>$/;"	m	language:Vim
+%%	/home/gavin/gavim/gvim/vimrc	/^		cnoremap %% <C-R>=expand('%:h').'\/'<cr>$/;"	m	language:Vim
+<	/home/gavin/gavim/gvim/vimrc	/^		vnoremap < <gv						"visual shifting left (does not exit Visual mode)$/;"	m	language:Vim
+<A-j>	/home/gavin/gavim/gvim/vimrc	/^		noremap <A-j> <C-d>$/;"	m	language:Vim
+<A-k>	/home/gavin/gavim/gvim/vimrc	/^		noremap <A-k> <C-u>$/;"	m	language:Vim
+<A-left>	/home/gavin/gavim/gvim/vimrc	/^		map <A-left> <ESC>:bp<CR>$/;"	m	language:Vim
+<A-right>	/home/gavin/gavim/gvim/vimrc	/^		map <A-right> <ESC>:bn<CR>$/;"	m	language:Vim
+<Bar>	/home/gavin/gavim/gvim/vimrc	/^          inoremap <silent> <Bar>   <Bar><Esc>:call <SID>align()<CR>a$/;"	m	language:Vim
+<BS>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr><BS> neocomplcache#smart_close_popup()."\\<C-h>"$/;"	m	language:Vim
+<C-A>	/home/gavin/gavim/gvim/vimrc	/^		cnoremap <C-A> <C-C>gggH<C-O>G$/;"	m	language:Vim
+<C-A>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-A> <C-O>gg<C-O>gH<C-O>G$/;"	m	language:Vim
+<C-A>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-A> gggH<C-O>G$/;"	m	language:Vim
+<C-A>	/home/gavin/gavim/gvim/vimrc	/^		onoremap <C-A> <C-C>gggH<C-O>G$/;"	m	language:Vim
+<C-C>	"+y	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-C>	"+y$/;"	m	language:Vim
+<C-d>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr> <C-d>      pumvisible() ? "\\<PageDown>\\<C-p>\\<C-n>" : "\\<C-d>"$/;"	m	language:Vim
+<C-e>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr><C-e>  neocomplcache#cancel_popup()$/;"	m	language:Vim
+<C-F11>	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <C-F11> :UpdateTags -R .\/<CR>  "update tags of all files under current directory$/;"	m	language:Vim
+<C-g>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr><C-g>     neocomplcache#undo_completion()$/;"	m	language:Vim
+<C-H>	/home/gavin/gavim/gvim/vimrc	/^		map <C-H> <C-W>h<C-W>_$/;"	m	language:Vim
+<C-h>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr><C-h> neocomplcache#smart_close_popup()."\\<C-h>"$/;"	m	language:Vim
+<C-J>	/home/gavin/gavim/gvim/vimrc	/^		map <C-J> <C-W>j<C-W>_$/;"	m	language:Vim
+<C-K>	/home/gavin/gavim/gvim/vimrc	/^		map <C-K> <C-W>k<C-W>_$/;"	m	language:Vim
+<C-k>	/home/gavin/gavim/gvim/vimrc	/^        imap <C-k>     <Plug>(neocomplcache_snippets_expand)$/;"	m	language:Vim
+<C-L>	/home/gavin/gavim/gvim/vimrc	/^		map <C-L> <C-W>l<C-W>_$/;"	m	language:Vim
+<C-l>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr><C-l>     neocomplcache#complete_common_string()$/;"	m	language:Vim
+<C-left>	/home/gavin/gavim/gvim/vimrc	/^		map <C-left> <ESC>gT<CR>$/;"	m	language:Vim
+<C-N>	/home/gavin/gavim/gvim/vimrc	/^		cnoremap <C-N> <Down>					"next command in command history$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>	/home/gavin/gavim/gvim/vimrc	/^		cnoremap <C-P> <Up>						"previous command in command history$/;"	m	language:Vim
+<C-right>	/home/gavin/gavim/gvim/vimrc	/^		map <C-right> <ESC>gt<CR>$/;"	m	language:Vim
+<C-S-Tab>	/home/gavin/gavim/gvim/vimrc	/^		cnoremap <C-S-Tab> <C-C>gT$/;"	m	language:Vim
+<C-S-Tab>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S-Tab> <C-O>gT$/;"	m	language:Vim
+<C-S-Tab>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S-Tab> gT$/;"	m	language:Vim
+<C-S-Tab>	/home/gavin/gavim/gvim/vimrc	/^		onoremap <C-S-Tab> <C-C>gT$/;"	m	language:Vim
+<C-S>		:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR>$/;"	m	language:Vim
+<C-S>		:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-Tab>	/home/gavin/gavim/gvim/vimrc	/^		cnoremap <C-Tab> <C-C>gt$/;"	m	language:Vim
+<C-Tab>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-Tab> <C-O>gt$/;"	m	language:Vim
+<C-Tab>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-Tab> gt$/;"	m	language:Vim
+<C-Tab>	/home/gavin/gavim/gvim/vimrc	/^		onoremap <C-Tab> <C-C>gt$/;"	m	language:Vim
+<C-u>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr> <C-u>      pumvisible() ? "\\<PageUp>\\<C-p>\\<C-n>" : "\\<C-u>"$/;"	m	language:Vim
+<C-X>	"+x	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-X>	"+x$/;"	m	language:Vim
+<C-y>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr><C-y>  neocomplcache#close_popup()$/;"	m	language:Vim
+<C-Z>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-Z> <C-O>u$/;"	m	language:Vim
+<C-Z>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-Z> u$/;"	m	language:Vim
+<CR>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr> <CR>       pumvisible() ? "\\<C-y>" : "\\<CR>"$/;"	m	language:Vim
+<CR>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr><CR>  pumvisible() ? neocomplcache#close_popup() : "\\<CR>"$/;"	m	language:Vim
+<D-r>	/home/gavin/gavim/gvim/vimrc	/^        nnoremap <silent> <D-r> :CtrlPMRU<CR>$/;"	m	language:Vim
+<D-t>	/home/gavin/gavim/gvim/vimrc	/^        nnoremap <silent> <D-t> :CtrlP<CR>$/;"	m	language:Vim
+<Down>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr> <Down>     pumvisible() ? "\\<C-n>" : "\\<Down>"$/;"	m	language:Vim
+<Esc>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr> <Esc>      pumvisible() ? "\\<C-e>" : "\\<Esc>"$/;"	m	language:Vim
+<F2>	/home/gavin/gavim/gvim/vimrc	/^		noremap <silent> <F2> :NERDTreeToggle<CR>$/;"	m	language:Vim
+<F3>	/home/gavin/gavim/gvim/vimrc	/^		map <F3> :Ctoggle<CR>$/;"	m	language:Vim
+<F4>	/home/gavin/gavim/gvim/vimrc	/^        nnoremap <silent><F4> :TagbarToggle<CR>$/;"	m	language:Vim
+<F7>	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <silent><F7> :PREVCOLOR<CR>$/;"	m	language:Vim
+<F8>	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <silent><F8> :NEXTCOLOR<CR>$/;"	m	language:Vim
+<leader><F1>	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader><F1> :h <C-R>=expand("<cword>")<CR><CR>$/;"	m	language:Vim
+<leader><leader><F1>	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader><leader><F1> :helpgrep <C-R>=expand("<cword>")<CR><CR>$/;"	m	language:Vim
+<leader><leader>ss	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader><leader>ss :Ack$/;"	m	language:Vim
+<leader><leader>sw	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader><leader>sw :Ack <C-R>=expand("<cword>")<CR><CR>$/;"	m	language:Vim
+<leader>=	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader>= :tabnew<CR>			"create an empty tab$/;"	m	language:Vim
+<leader>es	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader>es :vsp %%<CR>$/;"	m	language:Vim
+<leader>et	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader>et :tabe %%<CR>$/;"	m	language:Vim
+<leader>ev	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader>ev :tabe $MYVIMRC<CR>	" edit the vimrc file$/;"	m	language:Vim
+<leader>ew	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader>ew :e %%<CR>$/;"	m	language:Vim
+<Leader>f,	/home/gavin/gavim/gvim/vimrc	/^          nmap <Leader>f, :Tabularize \/,<CR>$/;"	m	language:Vim
+<Leader>f,	/home/gavin/gavim/gvim/vimrc	/^          vmap <Leader>f, :Tabularize \/,<CR>$/;"	m	language:Vim
+<Leader>f:	/home/gavin/gavim/gvim/vimrc	/^          nmap <Leader>f: :Tabularize \/:<CR>$/;"	m	language:Vim
+<Leader>f:	/home/gavin/gavim/gvim/vimrc	/^          vmap <Leader>f: :Tabularize \/:<CR>$/;"	m	language:Vim
+<Leader>f::	/home/gavin/gavim/gvim/vimrc	/^          nmap <Leader>f:: :Tabularize \/:\\zs<CR>$/;"	m	language:Vim
+<Leader>f::	/home/gavin/gavim/gvim/vimrc	/^          vmap <Leader>f:: :Tabularize \/:\\zs<CR>$/;"	m	language:Vim
+<Leader>f<Bar>	/home/gavin/gavim/gvim/vimrc	/^          nmap <Leader>f<Bar> :Tabularize \/<Bar><CR>$/;"	m	language:Vim
+<Leader>f<Bar>	/home/gavin/gavim/gvim/vimrc	/^          vmap <Leader>f<Bar> :Tabularize \/<Bar><CR>$/;"	m	language:Vim
+<Leader>f=	/home/gavin/gavim/gvim/vimrc	/^          nmap <Leader>f= :Tabularize \/=<CR>$/;"	m	language:Vim
+<Leader>f=	/home/gavin/gavim/gvim/vimrc	/^          vmap <Leader>f= :Tabularize \/=<CR>$/;"	m	language:Vim
+<leader>gh	/home/gavin/gavim/gvim/vimrc	/^		noremap <leader>gh :nohlsearch<CR>			"clearing highlighted search$/;"	m	language:Vim
+<Leader>gi	/home/gavin/gavim/gvim/vimrc	/^		nmap <Leader>gi :IndentGuidesToggle<CR>$/;"	m	language:Vim
+<leader>gj	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader>gj mz:m+<cr>`z$/;"	m	language:Vim
+<leader>gj	/home/gavin/gavim/gvim/vimrc	/^		vmap <leader>gj :m'>+<cr>`<my`>mzgv`yo`z$/;"	m	language:Vim
+<leader>gk	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader>gk mz:m-2<cr>`z$/;"	m	language:Vim
+<leader>gk	/home/gavin/gavim/gvim/vimrc	/^		vmap <leader>gk :m'<-2<cr>`>my`<mzgv`yo`z$/;"	m	language:Vim
+<leader>gl	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <silent><leader>gl m`:silent +g\/\\m^\\s*$\/d<CR>``:noh<CR>$/;"	m	language:Vim
+<leader>gL	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <silent><leader>gL m`:silent -g\/\\m^\\s*$\/d<CR>``:noh<CR>$/;"	m	language:Vim
+<leader>gn	/home/gavin/gavim/gvim/vimrc	/^		noremap <leader>gn :set number! number?<CR>	"line number$/;"	m	language:Vim
+<leader>go	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <silent><leader>go :set paste<CR>m`o<Esc>``:set nopaste<CR>$/;"	m	language:Vim
+<leader>gO	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <silent><leader>gO :set paste<CR>m`O<Esc>``:set nopaste<CR>$/;"	m	language:Vim
+<leader>gp	/home/gavin/gavim/gvim/vimrc	/^		noremap <leader>gp :set paste! paste?<CR>	"toggle paste mode$/;"	m	language:Vim
+<leader>gs	/home/gavin/gavim/gvim/vimrc	/^		noremap <leader>gs :set spell!<CR>			"enable spell checking$/;"	m	language:Vim
+<leader>gt	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <leader>gt :tabclose<CR>	"close a tab$/;"	m	language:Vim
+<leader>gw	/home/gavin/gavim/gvim/vimrc	/^		noremap <leader>gw :set wrap! wrap?<CR>		"warp line$/;"	m	language:Vim
+<leader>lb	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <leader>lb :CtrlPBuffer<CR>$/;"	m	language:Vim
+<leader>lf	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <leader>lf :CtrlPMRU<CR>$/;"	m	language:Vim
+<Leader>q	/home/gavin/gavim/gvim/vimrc	/^		noremap <Leader>q :e %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>$/;"	m	language:Vim
+<Leader>qt	/home/gavin/gavim/gvim/vimrc	/^		noremap <Leader>qt :tabe %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>$/;"	m	language:Vim
+<Leader>qv	/home/gavin/gavim/gvim/vimrc	/^		noremap <Leader>qv :vs %:p:s,.h$,.X123X,:s,.cpp$,.h,:s,.X123X$,.cpp,<CR>$/;"	m	language:Vim
+<leader>rt	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <leader>rt :%s\/$/;"	m	language:Vim
+<leader>sc	/home/gavin/gavim/gvim/vimrc	/^        nmap <leader>sc :args *.cpp *.h<CR>$/;"	m	language:Vim
+<leader>sl	/home/gavin/gavim/gvim/vimrc	/^        nmap <leader>sl :SessionList<CR>$/;"	m	language:Vim
+<leader>ss	/home/gavin/gavim/gvim/vimrc	/^        nmap <leader>ss :SessionSave<CR>$/;"	m	language:Vim
+<leader>sv	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader>sv :so $MYVIMRC<CR>	" reload the vimrc file$/;"	m	language:Vim
+<leader>_	/home/gavin/gavim/gvim/vimrc	/^		nmap <leader>_ :Scratch<CR>			"create a scratch buffer$/;"	m	language:Vim
+<s-CR>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr><s-CR> pumvisible() ? neocomplcache#close_popup() "\\<CR>" : "\\<CR>"$/;"	m	language:Vim
+<Space>	/home/gavin/gavim/gvim/vimrc	/^		nnoremap <silent> <Space> @=(foldlevel('.')?'zA':"\\<Space>")<CR>$/;"	m	language:Vim
+<Space>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <Space> zf$/;"	m	language:Vim
+<TAB>	/home/gavin/gavim/gvim/vimrc	/^        imap <expr><TAB> neocomplcache#sources#snippets_complete#expandable() ? "\\<Plug>(neocomplcache_snippets_expand)" : pumvisible() ? "\\<C-n>" : "\\<TAB>"$/;"	m	language:Vim
+<TAB>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr><TAB>  pumvisible() ? "\\<C-n>" : "\\<TAB>"$/;"	m	language:Vim
+<Up>	/home/gavin/gavim/gvim/vimrc	/^        inoremap <expr> <Up>       pumvisible() ? "\\<C-p>" : "\\<Up>"$/;"	m	language:Vim
+>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap > >gv 						"visual shifting right (does not exit Visual mode)$/;"	m	language:Vim
+align	/home/gavin/gavim/gvim/vimrc	/^          function! s:align()$/;"	f	language:Vim
+cd.	/home/gavin/gavim/gvim/vimrc	/^		cnoremap cd. lcd %:p:h<CR>				"change to current file dir$/;"	m	language:Vim
+Ctoggle	/home/gavin/gavim/gvim/vimrc	/^		command! Ctoggle call s:qf_toggle()$/;"	c	language:Vim
+cwd	/home/gavin/gavim/gvim/vimrc	/^		cnoremap cwd lcd %:p:h<CR>				"change to current file dir$/;"	m	language:Vim
+g:ackprg	/home/gavin/gavim/gvim/vimrc	/^		let g:ackprg="ack-grep -H --nocolor --nogroup --column"$/;"	v	language:Vim
+g:ctrlp_custom_ignore	/home/gavin/gavim/gvim/vimrc	/^        let g:ctrlp_custom_ignore = {$/;"	v	language:Vim
+g:ctrlp_map	/home/gavin/gavim/gvim/vimrc	/^		let g:ctrlp_map = '<leader>l'$/;"	v	language:Vim
+g:ctrlp_match_window_bottom	/home/gavin/gavim/gvim/vimrc	/^		let g:ctrlp_match_window_bottom = 1$/;"	v	language:Vim
+g:ctrlp_max_height	/home/gavin/gavim/gvim/vimrc	/^		let g:ctrlp_max_height = 50$/;"	v	language:Vim
+g:ctrlp_working_path_mode	/home/gavin/gavim/gvim/vimrc	/^        let g:ctrlp_working_path_mode = 2$/;"	v	language:Vim
+g:easytags_cmd	/home/gavin/gavim/gvim/vimrc	/^		let g:easytags_cmd = 'ctags'			"ctag program location, eqv. to \/usr\/local\/bin\/ctags$/;"	v	language:Vim
+g:easytags_dynamic_files	/home/gavin/gavim/gvim/vimrc	/^		let g:easytags_dynamic_files = 2		"=0 means global first, =1 means local first, =2 means local only$/;"	v	language:Vim
+g:easytags_include_members	/home/gavin/gavim/gvim/vimrc	/^		let g:easytags_include_members = 1		"ctags by default does not generate tags for class and structs$/;"	v	language:Vim
+g:indent_guides_enable_on_vim_startup	/home/gavin/gavim/gvim/vimrc	/^		let g:indent_guides_enable_on_vim_startup = 1$/;"	v	language:Vim
+g:indent_guides_guide_size	/home/gavin/gavim/gvim/vimrc	/^		let g:indent_guides_guide_size = 1$/;"	v	language:Vim
+g:mapleader	/home/gavin/gavim/gvim/vimrc	/^		let g:mapleader = ','$/;"	v	language:Vim
+g:neocomplcache_enable_at_startup	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_enable_at_startup = 1				"disable AutoComplPop.$/;"	v	language:Vim
+g:neocomplcache_enable_auto_delimiter	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_enable_auto_delimiter = 1$/;"	v	language:Vim
+g:neocomplcache_enable_auto_select	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_enable_auto_select = 0$/;"	v	language:Vim
+g:neocomplcache_enable_camel_case_completion	/home/gavin/gavim/gvim/vimrc	/^		let g:neocomplcache_enable_camel_case_completion = 1	"use camel case completion.$/;"	v	language:Vim
+g:neocomplcache_enable_camel_case_completion	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_enable_camel_case_completion = 1	"use neocomplcache.$/;"	v	language:Vim
+g:neocomplcache_enable_smart_case	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_enable_smart_case = 1				"use smartcase.$/;"	v	language:Vim
+g:neocomplcache_enable_underbar_completion	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_enable_underbar_completion = 1		"use underbar completion.$/;"	v	language:Vim
+g:neocomplcache_min_syntax_length	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_min_syntax_length = 3				"set minimum syntax keyword length.$/;"	v	language:Vim
+g:neocomplcache_omni_patterns	/home/gavin/gavim/gvim/vimrc	/^            let g:neocomplcache_omni_patterns = {}$/;"	v	language:Vim
+g:neocomplcache_omni_patterns	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_omni_patterns.c = '\\%(\\.\\|->\\)\\h\\w*'$/;"	v	language:Vim
+g:neocomplcache_omni_patterns	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_omni_patterns.cpp = '\\h\\w*\\%(\\.\\|->\\)\\h\\w*\\|\\h\\w*::'$/;"	v	language:Vim
+g:neocomplcache_omni_patterns	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_omni_patterns.php = '[^. \\t]->\\h\\w*\\|\\h\\w*::'$/;"	v	language:Vim
+g:neocomplcache_omni_patterns	/home/gavin/gavim/gvim/vimrc	/^        let g:neocomplcache_omni_patterns.ruby = '[^. *\\t]\\.\\h\\w*\\|\\h\\w*::'$/;"	v	language:Vim
+g:nrrw_rgn_vert	/home/gavin/gavim/gvim/vimrc	/^		let g:nrrw_rgn_vert = 1$/;"	v	language:Vim
+g:Powerline_symbols	/home/gavin/gavim/gvim/vimrc	/^			let g:Powerline_symbols = 'unicode'$/;"	v	language:Vim
+g:tagbar_left	/home/gavin/gavim/gvim/vimrc	/^        let g:tagbar_left = 1$/;"	v	language:Vim
+h	/home/gavin/gavim/gvim/vimrc	/^		cnoreabbrev h tab h$/;"	m	language:Vim
+j	/home/gavin/gavim/gvim/vimrc	/^		nnoremap j gj$/;"	m	language:Vim
+jj	/home/gavin/gavim/gvim/vimrc	/^		imap jj <esc>$/;"	m	language:Vim
+k	/home/gavin/gavim/gvim/vimrc	/^		nnoremap k gk$/;"	m	language:Vim
+mapleader	/home/gavin/gavim/gvim/vimrc	/^		let mapleader = ','$/;"	v	language:Vim
+Maximize_Window	/home/gavin/gavim/gvim/vimrc	/^			function! Maximize_Window()$/;"	f	language:Vim
+NERDTreeChDirMode	/home/gavin/gavim/gvim/vimrc	/^        let NERDTreeChDirMode=0$/;"	v	language:Vim
+NERDTreeIgnore	/home/gavin/gavim/gvim/vimrc	/^        let NERDTreeIgnore=['\\.pyc', '\\~$', '\\.swo$', '\\.swp$', '\\.git', '\\.hg', '\\.svn', '\\.bzr']$/;"	v	language:Vim
+NERDTreeKeepTreeInNewTab	/home/gavin/gavim/gvim/vimrc	/^		let NERDTreeKeepTreeInNewTab=1$/;"	v	language:Vim
+NERDTreeQuitOnOpen	/home/gavin/gavim/gvim/vimrc	/^        let NERDTreeQuitOnOpen=1$/;"	v	language:Vim
+NERDTreeShowBookmarks	/home/gavin/gavim/gvim/vimrc	/^        let NERDTreeShowBookmarks=1$/;"	v	language:Vim
+qf_toggle	/home/gavin/gavim/gvim/vimrc	/^		function! s:qf_toggle()$/;"	f	language:Vim
+RestoreSess	/home/gavin/gavim/gvim/vimrc	/^			fu! RestoreSess()$/;"	f	language:Vim
+SaveSess	/home/gavin/gavim/gvim/vimrc	/^			fu! SaveSess()$/;"	f	language:Vim
+w!!	/home/gavin/gavim/gvim/vimrc	/^		cmap w!! w !sudo tee % >\/dev\/null$/;"	m	language:Vim
+Y	/home/gavin/gavim/gvim/vimrc	/^		nnoremap Y y$						"Yank till line end$/;"	m	language:Vim

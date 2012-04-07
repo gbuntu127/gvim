@@ -51,6 +51,8 @@
 		Bundle 'vim-scripts/sessionman.vim'
 		"replacement of command-T
 		Bundle 'kien/ctrlp.vim'
+		"file and buffer explorer
+		Bundle 'wincent/Command-T'
 		"format statusline
 		Bundle 'Lokaltog/vim-powerline'
 		"easy jumping \w
@@ -64,6 +66,8 @@
 		"Bundle 'flazz/vim-colorschemes'
 		"Gavin color selection and ScrollColor plugin
 		Bundle 'gbuntu127/gcolor'
+		"insert a solarized colorscheme
+		altercation/vim-colors-solarized
 
 		"programming helpers
 		"edit selected region only
@@ -90,6 +94,8 @@
 		Bundle 'duff/vim-scratch'
 		"easy maintain of ctags, requires Exuberant Ctags
 		Bundle 'xolox/vim-easytags'
+		"easy to add surrounding
+		tBundle 'pope/vim-surround'
 "}
 
 
@@ -324,9 +330,9 @@
 		nnoremap <silent><leader>gO :set paste<CR>m`O<Esc>``:set nopaste<CR>
 
 		"CTRL+S: save, note need to add "stty -ixon" to .bashrc for terminal vim
-		noremap <C-S>		:update<CR>
-		vnoremap <C-S>		<C-C>:update<CR>
-		inoremap <C-S>		<C-O>:update<CR>
+		noremap <C-S>		:update<CR><ESC>
+		vnoremap <C-S>		<C-C>:update<CR><ESC>
+		inoremap <C-S>		<C-O>:update<CR><ESC>
 
 		"copy cut paste, traditional support
 		vnoremap <C-C>	"+y
@@ -423,13 +429,13 @@
     " }
 
     " Ctrlp{
-		let g:ctrlp_map = '<leader>b'
+		let g:ctrlp_map = '<leader>l'
 		"matching on top
 		let g:ctrlp_match_window_bottom = 1
 		"most recent used"
-		nnoremap <leader>bf :CtrlPMRU<CR>
+		nnoremap <leader>lf :CtrlPMRU<CR>
 		"buffer list"
-		nnoremap <leader>bb :CtrlPBuffer<CR>
+		nnoremap <leader>lb :CtrlPBuffer<CR>
 		"max windows height"
 		let g:ctrlp_max_height = 50
     " }
@@ -578,7 +584,13 @@
         let g:tagbar_left = 1
      "}
 
-     "" Fugitive {
+     " vim-indent-guides {
+		let g:indent_guides_enable_on_vim_startup = 1
+		nmap <Leader>gi :IndentGuidesToggle<CR>
+		let g:indent_guides_guide_size = 1
+     "}
+
+     " Fugitive {
         "nnoremap <silent> <leader>gs :Gstatus<CR>
         "nnoremap <silent> <leader>gd :Gdiff<CR>
         "nnoremap <silent> <leader>gc :Gcommit<CR>
