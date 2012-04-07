@@ -43,6 +43,10 @@
 <C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
 <C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
 <C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		"+gP	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-P>		"+gP$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
+<C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
 <C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
 <C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
 <C-P>		<C-R>+					"support	/home/gavin/gavim/gvim/vimrc	/^		cmap <C-P>		<C-R>+					"support ctrl-v paste in command mode$/;"	m	language:Vim
@@ -73,6 +77,8 @@
 <C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
 <C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
 <C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		noremap <C-S>		:update<CR><ESC>$/;"	m	language:Vim
 <C-S>		<C-C>:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR>$/;"	m	language:Vim
 <C-S>		<C-C>:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR>$/;"	m	language:Vim
 <C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
@@ -85,8 +91,12 @@
 <C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
 <C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
 <C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-C>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		vnoremap <C-S>		<C-C>:update<CR><ESC>$/;"	m	language:Vim
 <C-S>		<C-O>:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR>$/;"	m	language:Vim
 <C-S>		<C-O>:update<CR>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
+<C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
 <C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
 <C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim
 <C-S>		<C-O>:update<CR><ESC>	/home/gavin/gavim/gvim/vimrc	/^		inoremap <C-S>		<C-O>:update<CR><ESC>$/;"	m	language:Vim

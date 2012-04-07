@@ -67,7 +67,7 @@
 		"Gavin color selection and ScrollColor plugin
 		Bundle 'gbuntu127/gcolor'
 		"insert a solarized colorscheme
-		altercation/vim-colors-solarized
+		Bundle 'ltercation/vim-colors-solarized'
 
 		"programming helpers
 		"edit selected region only
@@ -95,7 +95,7 @@
 		"easy maintain of ctags, requires Exuberant Ctags
 		Bundle 'xolox/vim-easytags'
 		"easy to add surrounding
-		tBundle 'pope/vim-surround'
+		Bundle 'pope/vim-surround'
 "}
 
 
