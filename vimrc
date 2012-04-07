@@ -305,11 +305,11 @@
 		"easy to edit of files under current file path
 		cnoremap %% <C-R>=expand('%:h').'/'<cr>
 		"edit file in current window
-		nmap <leader>ew :e %%
+		nmap <leader>ew :e %%<CR>
 		"edit file in vertically split window
-		nmap <leader>es :vsp %%
+		nmap <leader>es :vsp %%<CR>
 		"edit file in new tab
-		nmap <leader>et :tabe %%
+		nmap <leader>et :tabe %%<CR>
 
 		"switch two lines
 		nmap <leader>gj mz:m+<cr>`z
@@ -362,10 +362,8 @@
 		nnoremap <silent> <Space> @=(foldlevel('.')?'zA':"\<Space>")<CR>
 		vnoremap <Space> zf
 		
-		"remove trailing 
- of some c files
-		nnoremap <leader>rt :%s/
-//g<CR>
+		"remove trailing of some c files
+		nnoremap <leader>rt :%s///g<CR>
 
 		"when you forget to sudo.
 		cmap w!! w !sudo tee % >/dev/null
@@ -389,8 +387,8 @@
 	"Command Mapping {
 
 		"change to current file dir
-		cnoremap cwd lcd %:p:h					"change to current file dir
-		cnoremap cd. lcd %:p:h					"change to current file dir
+		cnoremap cwd lcd %:p:h<CR>				"change to current file dir
+		cnoremap cd. lcd %:p:h<CR>				"change to current file dir
 
 		"easier cmd history
 		cnoremap <C-P> <Up>						"previous command in command history
@@ -404,7 +402,7 @@
 		cnoreabbrev h tab h
 		nmap <leader><F1> :h <C-R>=expand("<cword>")<CR><CR>
 		nmap <leader><leader><F1> :helpgrep <C-R>=expand("<cword>")<CR><CR>
-		au! FileType help map <buffer> <F1> :q<cr>
+		au! FileType help map <buffer> <F1> :q<CR>
 	"}
 
 	"VIMRC Mapping {
@@ -456,8 +454,8 @@
 	" }
 
     " ScrollColors{
-		nnoremap <silent><F8> :NEXTCOLOR<cr>
-		nnoremap <silent><F7> :PREVCOLOR<cr>
+		nnoremap <silent><F8> :NEXTCOLOR<CR>
+		nnoremap <silent><F7> :PREVCOLOR<CR>
 	" }
 
     " Ack-grep {
@@ -504,8 +502,8 @@
 		highlight link cMember Special			"adapt colorscheme to highlight class/struct tags
 		"highlight cMember gui=italic			"can aslo define it by yourself
 		"let g:easytags_resolve_links = 1		"if you use symbolic link a lot
-		nnoremap <C-F11> :UpdateTags -R ./		"update tags of all files under current directory
-    " }
+		nnoremap <C-F11> :UpdateTags -R ./<CR>  "update tags of all files under current directory
+		" }
 
     " AutoCloseTag {
         "" Make it so AutoCloseTag works for xml and xhtml files as well
@@ -559,6 +557,7 @@
         set sessionoptions=blank,buffers,curdir,folds,tabpages,winsize
         nmap <leader>sl :SessionList<CR>
         nmap <leader>ss :SessionSave<CR>
+        nmap <leader>sc :args *.cpp *.h<CR>
      " }
 
      " Buffer explorer {
