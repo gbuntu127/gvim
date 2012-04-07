@@ -443,6 +443,12 @@
 
     " Powerline{
 		let g:Powerline_symbols = 'unicode'
+		"insert curdir befere file name
+		call Pl#Theme#InsertSegment('pwd', 'before', 'fileinfo')
+		""insert tag after fileinfo [todo]
+		"let g:current_tag_name = "%{tagbar#currenttag('[%s] ', '')}"
+		"call Pl#Segment#Create('tagname','g:current_tag_name')
+		"call Pl#Theme#InsertSegment('tagname', 'after', 'fileinfo')
 	" }
 
     " ScrollColors{
@@ -486,7 +492,7 @@
     " }
 
     " EasyTag {
-        set tags=./tags;/,~/.vimtags			"tag storage places, local folder first, otherwise to global one
+        set tags=./.tags;,~/.vimtags			"tag storage places, local folder first, otherwise to global one
 		let g:easytags_cmd = 'ctags'			"ctag program location, eqv. to /usr/local/bin/ctags
 		let g:easytags_dynamic_files = 2		"=0 means global first, =1 means local first, =2 means local only
 
@@ -494,6 +500,7 @@
 		highlight link cMember Special			"adapt colorscheme to highlight class/struct tags
 		"highlight cMember gui=italic			"can aslo define it by yourself
 		"let g:easytags_resolve_links = 1		"if you use symbolic link a lot
+		nnoremap <C-F11> :UpdateTags -R ./		"update tags of all files under current directory
     " }
 
     " AutoCloseTag {

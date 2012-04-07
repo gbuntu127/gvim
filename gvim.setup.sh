@@ -33,7 +33,10 @@ ln -s $gvimDir/vimrc $HOME/.vimrc
 #ln -s $gvimDir/vim $HOME/.vim
 
 echo "Gavin [step 3]: installing Vundle"
-git clone http://github.com/gmarik/vundle.git $HOME/.vim/bundle/vundle
+git clone git@github.com:gmarik/vundle.git $HOME/.vim/bundle/vundle
+
+#echo "Gavin [step 4]: installing Fonts"
+#git clone git@github.com:gbuntu127/gfonts.git $HOME/.fonts
 
 echo "Gavin [step 4]: installing plugins using Vundle"
 vim +BundleInstall! +BundleClean +q
