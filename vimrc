@@ -444,7 +444,7 @@
     " }
 
     " Powerline{
-		if !has('gui_running')
+		if has('gui_running')
 			let g:Powerline_symbols = 'unicode'
 			"insert curdir befere file name
 			call Pl#Theme#InsertSegment('pwd', 'before', 'fileinfo')
