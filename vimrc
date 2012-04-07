@@ -67,7 +67,7 @@
 		"Gavin color selection and ScrollColor plugin
 		Bundle 'gbuntu127/gcolor'
 		"insert a solarized colorscheme
-		Bundle 'ltercation/vim-colors-solarized'
+		Bundle 'altercation/vim-colors-solarized'
 
 		"programming helpers
 		"edit selected region only
@@ -95,7 +95,7 @@
 		"easy maintain of ctags, requires Exuberant Ctags
 		Bundle 'xolox/vim-easytags'
 		"easy to add surrounding
-		Bundle 'pope/vim-surround'
+		Bundle 'tpope/vim-surround'
 "}
 
 
@@ -585,9 +585,9 @@
      "}
 
      " vim-indent-guides {
-		let g:indent_guides_enable_on_vim_startup = 1
+		"let g:indent_guides_enable_on_vim_startup = 1
 		nmap <Leader>gi :IndentGuidesToggle<CR>
-		let g:indent_guides_guide_size = 1
+		let g:indent_guides_guide_size = 2
      "}
 
      " Fugitive {
