@@ -51,7 +51,7 @@
 		Bundle 'vim-scripts/sessionman.vim'
 		"replacement of command-T
 		Bundle 'kien/ctrlp.vim'
-		"file and buffer explorer
+		"file and buffer explorer, need to run
 		Bundle 'wincent/Command-T'
 		"format statusline
 		Bundle 'Lokaltog/vim-powerline'
@@ -337,7 +337,7 @@
 		"copy cut paste, traditional support
 		vnoremap <C-C>	"+y
 		"map <C-S-P>		"+gP
-		noremap <C-P>		"+gP
+		noremap <leader>p	"+gP
 		vnoremap <C-X>	"+x
 
 		"CTRL-A is Select all
@@ -583,6 +583,11 @@
         nnoremap <silent><F4> :TagbarToggle<CR>
         let g:tagbar_left = 1
      "}
+
+     " Command-T {
+		"need to run: rake make under ~/.vim/bundle/Command-T"
+		"cnoremap cake :!cd ~/.vim/bundle/Command-T/ & !rake make<CR>
+     "a
 
      " vim-indent-guides {
 		"let g:indent_guides_enable_on_vim_startup = 1
