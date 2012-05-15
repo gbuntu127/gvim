@@ -1,0 +1,321 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +1 applications/registration/piecewiseAtvCGM.cpp
+badd +483 ~/.vimrc
+badd +1 applications/geometry/pwaToDisp.cpp
+badd +42 src/geometry/Affine3D.h
+badd +282 src/geometry/PiecewiseAffine3D.cpp
+badd +44 src/geometry/PiecewiseAffine3D.h
+badd +153 src/geometry/Affine3D.cpp
+badd +194 src/geometry/Vector3D.cpp
+badd +47 src/geometry/Vector3D.h
+badd +1 src/geometry/Matrix3D.cpp
+badd +146 src/geometry/Matrix3D.h
+badd +94 applications/volume/TVtool.cpp
+badd +1 src/geometry/Piecewise.h
+badd +1 src/geometry/Piecewise.cpp
+badd +79 applications/registration/asvCGM.cpp
+badd +96 scripts/scalar_affine_reg
+badd +144 applications/volume/affineScalarVolume.cpp
+badd +74 applications/volume/piecewiseAffineScalarVolume.cpp
+badd +44 src/volume/PiecewiseAffineScalarVolume.cpp
+badd +36 src/volume/PiecewiseAffineScalarVolume.h
+badd +311 src/volume/TransformScalarVolume.h
+badd +219 include/volume/TransformVolume.h
+badd +37 include/volume/DeformationScalarVolume.h
+badd +1 include/volume/DeformationScalarVolume.cpp
+badd +402 include/volume/TransformScalarVolume.h
+badd +5 applications/registration/makefile
+badd +43 test/geometry/piecewiseAffine3D.cpp
+badd +42 include/geometry/PiecewiseAffine3D.h
+badd +1 src/geometry/PiecewiseAffine3DSmooth.cpp
+badd +1 include/geometry/PiecewiseAffine3D.cpp
+badd +56 include/geometry/Piecewise.h
+silent! argdel *
+edit applications/registration/piecewiseAtvCGM.cpp
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 33 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 141 + 87) / 175)
+argglobal
+enew
+file NERD_tree_1
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 451 - ((35 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+451
+normal! 05l
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+exe 'vert 1resize ' . ((&columns * 33 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 141 + 87) / 175)
+tabedit ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug/src/geometry/PiecewiseAffine3D.cpp
+set splitbelow splitright
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 239 - ((0 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+239
+normal! 015l
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+tabedit ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug/src/geometry/PiecewiseAffine3DSmooth.cpp
+set splitbelow splitright
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 51 - ((6 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+51
+normal! 0
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+tabedit ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug/src/geometry/Matrix3D.cpp
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 88 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 175)
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 479 - ((33 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+479
+normal! 02l
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+argglobal
+edit ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug/src/geometry/Affine3D.cpp
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 132 - ((19 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+132
+normal! 02l
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+exe 'vert 1resize ' . ((&columns * 88 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 86 + 87) / 175)
+tabedit ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug/src/geometry/Affine3D.cpp
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 134 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 40 + 87) / 175)
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 123 - ((4 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+123
+normal! 016l
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+exe 'vert 1resize ' . ((&columns * 134 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 40 + 87) / 175)
+tabedit ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug/src/geometry/Matrix3D.cpp
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 134 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 40 + 87) / 175)
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 580 - ((19 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+580
+normal! 0
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+argglobal
+enew
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+exe 'vert 1resize ' . ((&columns * 134 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 40 + 87) / 175)
+tabedit ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug/src/geometry/Piecewise.cpp
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 173 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 1 + 87) / 175)
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 66 - ((1 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+66
+normal! 025l
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+argglobal
+edit ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug/src/geometry/Piecewise.h
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+let s:l = 41 - ((14 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+41
+normal! 02l
+lcd ~/DevLin/Software/dtitk/Source/Mala_3D_20120423_Local_Debug
+wincmd w
+exe 'vert 1resize ' . ((&columns * 173 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 1 + 87) / 175)
+tabnext 2
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :

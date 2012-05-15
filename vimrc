@@ -373,6 +373,9 @@
 
 		"when you forget to sudo.
 		cmap w!! w !sudo tee % >/dev/null
+
+		map <leader>gq ?^$\\|^\s*\(\\begin\\|\\end\\|\\label\)?1<CR>gq//-1<CR>
+		"omap lp ?^$\\|^\s*\(\\begin\\|\\end\\|\\label\)?1<CR>//-1<CR>.<CR>
 	"}
 
 	"Function Mapping {
@@ -409,6 +412,12 @@
 		nmap <leader><F1> :h <C-R>=expand("<cword>")<CR><CR>
 		nmap <leader><leader><F1> :helpgrep <C-R>=expand("<cword>")<CR><CR>
 		au! FileType help map <buffer> <F1> :q<CR>
+
+		"compile using g++
+		nmap <F5> :make %:r<CR>
+		
+		"open terminal in current dir
+		nmap <silent><leader>gc :!terminator --working-dir=%:p:h&<CR>
 	"}
 
 	"VIMRC Mapping {
@@ -445,6 +454,8 @@
 		let g:nrrw_rgn_vert = 1
 		"extract narrow window
 		xmap <leader>nr <Plug>NrrwrgnDo<C-W>=
+		"go back to narrow region
+		nnoremap <leader>nv :NRV<CR><C-W>=
     " }
 
     " Powerline{
@@ -581,7 +592,7 @@
 
      " TagBar {
         nnoremap <silent><F4> :TagbarToggle<CR>
-        let g:tagbar_left = 1
+        let g:tagbar_left = 0
      "}
 
      " Command-T {
@@ -612,6 +623,9 @@
 		let g:neocomplcache_enable_camel_case_completion = 1	"use camel case completion.
         let g:neocomplcache_min_syntax_length = 3				"set minimum syntax keyword length.
         let g:neocomplcache_enable_auto_delimiter = 1
+
+		"toggle neocomplcache, used when it slows down vim
+		noremap <F6> :NeoComplCacheToggle<CR>
 
         "autoComplPop like behavior.
         let g:neocomplcache_enable_auto_select = 0

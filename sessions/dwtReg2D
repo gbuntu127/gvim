@@ -1,0 +1,361 @@
+let SessionLoad = 1
+if &cp | set nocp | endif
+let s:so_save = &so | let s:siso_save = &siso | set so=0 siso=0
+let v:this_session=expand("<sfile>:p")
+silent only
+cd ~/DevLin/MapleSVN/programs/dwtReg2D
+if expand('%') == '' && !&modified && line('$') <= 1 && getline(1) == ''
+  let s:wipebuf = bufnr('%')
+endif
+set shortmess=aoO
+badd +15 Affine.cpp
+badd +1 Canvas.cpp
+badd +1 DctNonLin.cpp
+badd +1 DwtNonLin.cpp
+badd +1 Img3D.cpp
+badd +6971 MainFrame.cpp
+badd +1 MainFrameUI.cpp
+badd +1 RegApp.cpp
+badd +1 RegScalar.cpp
+badd +158 ScalarImg.cpp
+badd +1 SynDeform.cpp
+badd +1 Timer.cpp
+badd +1 Vector3D.cpp
+badd +1 VectorImg.cpp
+badd +1 Affine.h
+badd +1 Canvas.h
+badd +1 Common.h
+badd +1 DctNonLin.h
+badd +1 DwtNonLin.h
+badd +1 Img3D.h
+badd +1 MainFrame.h
+badd +1 MainFrameUI.h
+badd +1 ParaField.h
+badd +1 RegApp.h
+badd +1 RegScalar.h
+badd +1 ScalarImg.h
+badd +1 SynDeform.h
+badd +1 Timer.h
+badd +1 Vector3D.h
+badd +1 VectorImg.h
+badd +586 ~/.vimrc
+badd +1 Piecewise.cpp
+badd +0 Piecewise.h
+silent! argdel *
+edit MainFrame.cpp
+set splitbelow splitright
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=0
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+6710
+normal zo
+6750
+normal zo
+6773
+normal zo
+6788
+normal zo
+6792
+normal zo
+6798
+normal zo
+6792
+normal zo
+6810
+normal zo
+6819
+normal zo
+6824
+normal zo
+6864
+normal zo
+6903
+normal zo
+6908
+normal zo
+6920
+normal zo
+6922
+normal zo
+6926
+normal zo
+6920
+normal zo
+6940
+normal zo
+6864
+normal zo
+6788
+normal zo
+7001
+normal zo
+6750
+normal zo
+6710
+normal zo
+let s:l = 6971 - ((19 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+6971
+normal! 019l
+lcd ~/DevLin/MapleSVN/programs/dwtReg2D
+tabedit ~/DevLin/MapleSVN/programs/dwtReg2D/Piecewise.cpp
+set splitbelow splitright
+wincmd _ | wincmd |
+vsplit
+1wincmd h
+wincmd w
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+exe 'vert 1resize ' . ((&columns * 136 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 38 + 87) / 175)
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+19
+normal zo
+36
+normal zo
+36
+normal zo
+19
+normal zo
+599
+normal zo
+629
+normal zo
+633
+normal zo
+657
+normal zo
+662
+normal zo
+633
+normal zo
+680
+normal zo
+704
+normal zo
+709
+normal zo
+680
+normal zo
+629
+normal zo
+677
+normal zo
+682
+normal zo
+693
+normal zo
+700
+normal zo
+705
+normal zo
+710
+normal zo
+716
+normal zo
+720
+normal zo
+724
+normal zo
+710
+normal zo
+700
+normal zo
+756
+normal zo
+758
+normal zo
+766
+normal zo
+770
+normal zo
+774
+normal zo
+779
+normal zo
+783
+normal zo
+788
+normal zo
+792
+normal zo
+766
+normal zo
+756
+normal zo
+693
+normal zo
+809
+normal zo
+677
+normal zo
+693
+normal zo
+700
+normal zo
+705
+normal zo
+710
+normal zo
+716
+normal zo
+720
+normal zo
+724
+normal zo
+710
+normal zo
+700
+normal zo
+756
+normal zo
+758
+normal zo
+766
+normal zo
+770
+normal zo
+774
+normal zo
+779
+normal zo
+783
+normal zo
+788
+normal zo
+792
+normal zo
+766
+normal zo
+756
+normal zo
+693
+normal zo
+809
+normal zo
+599
+normal zo
+693
+normal zo
+700
+normal zo
+705
+normal zo
+710
+normal zo
+716
+normal zo
+720
+normal zo
+724
+normal zo
+710
+normal zo
+700
+normal zo
+756
+normal zo
+758
+normal zo
+766
+normal zo
+770
+normal zo
+774
+normal zo
+779
+normal zo
+783
+normal zo
+788
+normal zo
+792
+normal zo
+766
+normal zo
+756
+normal zo
+693
+normal zo
+809
+normal zo
+let s:l = 683 - ((19 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+683
+normal! 03l
+lcd ~/DevLin/MapleSVN/programs/dwtReg2D
+wincmd w
+argglobal
+enew
+file ~/DevLin/MapleSVN/programs/dwtReg2D/__Tagbar__
+setlocal fdm=manual
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal nofen
+lcd ~/DevLin/MapleSVN/programs/dwtReg2D
+wincmd w
+exe 'vert 1resize ' . ((&columns * 136 + 87) / 175)
+exe 'vert 2resize ' . ((&columns * 38 + 87) / 175)
+tabedit ~/DevLin/MapleSVN/programs/dwtReg2D/Piecewise.h
+set splitbelow splitright
+set nosplitright
+wincmd t
+set winheight=1 winwidth=1
+argglobal
+setlocal fdm=syntax
+setlocal fde=0
+setlocal fmr={{{,}}}
+setlocal fdi=#
+setlocal fdl=100
+setlocal fml=1
+setlocal fdn=20
+setlocal fen
+9
+normal zo
+let s:l = 33 - ((29 * winheight(0) + 20) / 40)
+if s:l < 1 | let s:l = 1 | endif
+exe s:l
+normal! zt
+33
+normal! 0
+lcd ~/DevLin/MapleSVN/programs/dwtReg2D
+tabnext 2
+if exists('s:wipebuf')
+  silent exe 'bwipe ' . s:wipebuf
+endif
+unlet! s:wipebuf
+set winheight=1 winwidth=20 shortmess=filnxtToO
+let s:sx = expand("<sfile>:p:r")."x.vim"
+if file_readable(s:sx)
+  exe "source " . fnameescape(s:sx)
+endif
+let &so = s:so_save | let &siso = s:siso_save
+doautoall SessionLoadPost
+unlet SessionLoad
+" vim: set ft=vim :
